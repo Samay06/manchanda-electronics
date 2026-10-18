@@ -1,4 +1,6 @@
-const BASE = '/api';
+import { staticApi } from './staticCatalog.js';
+
+const BASE = import.meta.env.VITE_API_BASE || '/api';
 
 async function request(path, params) {
   const qs = params
@@ -7,13 +9,38 @@ async function request(path, params) {
         Object.entries(params).filter(([, v]) => v !== undefined && v !== null && v !== ''),
       ).toString()
     : '';
-  const res = await fetch(`${BASE}${path}${qs}`);
-  if (!res.ok) {
-    const err = new Error(`Request failed (${res.status})`);
-    err.status = res.status;
-    throw err;
+
+  try {
+    const res = await fetch(`${BASE}${path}${qs}`);
+    if (res.ok) {
+      return await res.json();
+    }
+  } catch {
+    // Backend offline / not deployed on Vercel: fallback to static catalog below
   }
-  return res.json();
+
+  // Fallback to embedded static catalog
+  if (path === '/categories') {
+    return staticApi.categories();
+  }
+  if (path === '/brands') {
+    return staticApi.brands();
+  }
+  if (path === '/products') {
+    return staticApi.products(params);
+  }
+  if (path.startsWith('/products/')) {
+    const slug = path.replace('/products/', '');
+    const data = await staticApi.product(slug);
+    if (!data) {
+      const err = new Error('Product not found');
+      err.status = 404;
+      throw err;
+    }
+    return data;
+  }
+
+  throw new Error(`Endpoint ${path} not available`);
 }
 
 export const api = {
@@ -22,14 +49,19 @@ export const api = {
   products: (params) => request('/products', params),
   product: (slug) => request(`/products/${slug}`),
   async enquire(payload) {
-    const res = await fetch(`${BASE}/enquiries`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-    const data = await res.json().catch(() => ({}));
-    if (!res.ok) throw Object.assign(new Error(data.error || 'Could not send enquiry'), { details: data.details });
-    return data;
+    try {
+      const res = await fetch(`${BASE}/enquiries`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (res.ok) {
+        return await res.json();
+      }
+    } catch {
+      // Backend offline / not deployed on Vercel
+    }
+    return staticApi.enquire(payload);
   },
 };
 
