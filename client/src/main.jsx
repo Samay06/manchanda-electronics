@@ -7,6 +7,9 @@ import './styles/phase4.css';
 import App from './app/App.jsx';
 import { SmoothScroll } from './app/SmoothScroll.jsx';
 import { CompareProvider, EnquiryProvider } from './app/stores.jsx';
+import { registerServiceWorker } from './serviceWorkerRegistration.js';
+
+registerServiceWorker();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

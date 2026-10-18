@@ -1,0 +1,65 @@
+{
+  "name": "Manchanda Electricals",
+  "short_name": "Manchanda",
+  "description": "Wholesale Havells and Orient Fans from Bhagirath Palace, Chandni Chowk",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F6EFE6",
+  "theme_color": "#561C24",
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "categories": ["shopping", "business", "utilities"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Browse Fan Catalogue",
+      "short_name": "Fans",
+      "url": "/fans",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Wholesale Enquiry List",
+      "short_name": "Enquiry",
+      "url": "/enquiry",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Compare Models",
+      "short_name": "Compare",
+      "url": "/compare",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Shop Counter Details",
+      "short_name": "Store",
+      "url": "/contact",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

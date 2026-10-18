@@ -8,6 +8,7 @@ import CustomCursor from '../components/layout/CustomCursor.jsx';
 import Loader from '../components/layout/Loader.jsx';
 import ScrollIndicator from '../components/layout/ScrollIndicator.jsx';
 import CompareDrawer from '../components/catalogue/CompareDrawer.jsx';
+import InstallPrompt from '../components/layout/InstallPrompt.jsx';
 import { useLenis } from './SmoothScroll.jsx';
 import { pageVariants } from '../lib/motion.js';
 import Home from '../pages/Home.jsx';
@@ -70,6 +71,7 @@ export default function App() {
         </motion.main>
       </AnimatePresence>
       <CompareDrawer />
+      <InstallPrompt />
       <ScrollIndicator />
     </>
   );
