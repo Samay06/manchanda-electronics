@@ -1,0 +1,115 @@
+{
+  "generatedAt": "2026-10-18T13:20:25.118Z",
+  "unparseableCount": 7,
+  "unparseable": [
+    {
+      "slug": "orient-arina",
+      "brand": "Orient",
+      "name": "Arina",
+      "category": "ceiling-fans",
+      "rawValues": [
+        "150",
+        "390",
+        "41",
+        "1200",
+        "230",
+        "370",
+        "50"
+      ],
+      "reason": "Could not reliably map raw array into standard spec columns"
+    },
+    {
+      "slug": "orient-farata-series",
+      "brand": "Orient",
+      "name": "Farata Series",
+      "category": "pedestal-fans",
+      "rawValues": [
+        "500",
+        "140",
+        "1400",
+        "500",
+        "140",
+        "1400"
+      ],
+      "reason": "Could not reliably map raw array into standard spec columns"
+    },
+    {
+      "slug": "orient-hornet-wall-49",
+      "brand": "Orient",
+      "name": "Hornet Wall 49",
+      "category": "wall-fans",
+      "rawValues": [
+        "400",
+        "85",
+        "1330",
+        "400",
+        "95",
+        "2100"
+      ],
+      "reason": "Could not reliably map raw array into standard spec columns"
+    },
+    {
+      "slug": "orient-smart-air-prime",
+      "brand": "Orient",
+      "name": "Smart Air Prime",
+      "category": "exhaust-fans",
+      "rawValues": [
+        "85",
+        "2500",
+        "150",
+        "220",
+        "2000",
+        "18",
+        "24"
+      ],
+      "reason": "Could not reliably map raw array into standard spec columns"
+    },
+    {
+      "slug": "orient-smart-air-ceiling-exhaust",
+      "brand": "Orient",
+      "name": "Smart Air Ceiling Exhaust",
+      "category": "exhaust-fans",
+      "rawValues": [
+        "200",
+        "200",
+        "1300",
+        "30",
+        "100"
+      ],
+      "reason": "Could not reliably map raw array into standard spec columns"
+    },
+    {
+      "slug": "orient-thunderstorm-pro",
+      "brand": "Orient",
+      "name": "Thunderstorm Pro",
+      "category": "industrial-fans",
+      "rawValues": [
+        "450",
+        "1400",
+        "1",
+        "100",
+        "7980"
+      ],
+      "reason": "Could not reliably map raw array into standard spec columns"
+    },
+    {
+      "slug": "orient-air-circulator-black",
+      "brand": "Orient",
+      "name": "Air Circulator Black",
+      "category": "industrial-fans",
+      "rawValues": [
+        "450",
+        "1450",
+        "1",
+        "100",
+        "8100",
+        "600",
+        "1400",
+        "1",
+        "175",
+        "15600"
+      ],
+      "reason": "Could not reliably map raw array into standard spec columns"
+    }
+  ]
+}

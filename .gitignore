@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.local
+.env.*.local
+data/raw/
+data/preview/
+data/pdfs/
+data/extract_log.txt
+data/sample_sheet.png
+__pycache__/
+*.log
+dist/
+.DS_Store
+Thumbs.db

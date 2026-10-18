@@ -1,0 +1,62 @@
+/* ============================================================
+   Manchanda Electricals — design tokens
+   Direction: luxury showroom, editorial, burgundy + ivory
+   ============================================================ */
+:root {
+  /* palette */
+  --burgundy-950: #3d1219;
+  --burgundy-900: #561c24;
+  --burgundy-700: #6d2932;
+  --burgundy-600: #823842;
+  --sand-300: #c7b7a3;
+  --cream-100: #e8d8c4;
+  --ivory-50: #f6efe6;
+  --ink-950: #2a0e12;
+  --ink-700: #5b3a3f;
+  --ink-500: #86696d;
+  --brass-500: #b08d57;
+  --brass-400: #c4a574;
+
+  /* semantic */
+  --bg: var(--ivory-50);
+  --bg-dark: var(--burgundy-900);
+  --text: var(--ink-950);
+  --text-muted: var(--ink-700);
+  --text-on-dark: var(--cream-100);
+  --text-on-dark-muted: var(--sand-300);
+  --line: rgba(86, 28, 36, 0.16);
+  --line-on-dark: rgba(232, 216, 196, 0.2);
+  --focus: var(--brass-500);
+
+  /* type */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Montserrat', system-ui, -apple-system, sans-serif;
+
+  --fs-label: 0.75rem;
+  --fs-small: 0.875rem;
+  --fs-body: 1rem;
+  --fs-lead: clamp(1rem, 0.35vw + 0.95rem, 1.15rem);
+  --fs-h3: clamp(1.25rem, 0.8vw + 1rem, 1.65rem);
+  --fs-h2: clamp(1.75rem, 1.8vw + 1rem, 2.5rem);
+  --fs-h1: clamp(2.2rem, 3.5vw + 1rem, 3.8rem);
+
+  --track-label: 0.14em;
+  --track-tight: -0.01em;
+
+  /* space + layout */
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+  --container: 1440px;
+  --section-y: clamp(5rem, 11vw, 10rem);
+  --radius: 2px;
+  --radius-lg: 6px;
+  --nav-h: 76px;
+
+  /* motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur: 0.6s;
+
+  /* depth */
+  --shadow-soft: 0 24px 60px -28px rgba(42, 14, 18, 0.35);
+  --shadow-card: 0 1px 0 rgba(86, 28, 36, 0.06), 0 18px 40px -26px rgba(42, 14, 18, 0.4);
+}
